@@ -1,0 +1,38 @@
+name: Frontend Quality Checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  quality_checks:
+    name: Prettier, Liniting, and Type Checking
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Install dependencies
+        run: npm install --prefix assets
+        if: always()
+
+      - name: Check code formatting
+        run: npm --prefix assets run prettier:check
+        if: always()
+
+      - name: Run Linter
+        run: npm --prefix assets run lint
+        if: always()
+
+      - name: Check types
+        run: npm --prefix assets run tsc
+        if: always()

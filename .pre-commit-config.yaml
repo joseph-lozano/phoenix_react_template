@@ -1,0 +1,75 @@
+# See https://pre-commit.com for more information
+# See https://pre-commit.com/hooks.html for more hooks
+fail_fast: true
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.2.0
+    hooks:
+      - id: trailing-whitespace
+      - id: check-yaml
+      - id: check-added-large-files
+
+  - repo: local
+    hooks:
+      - id: prettier
+        name: Frontend/Prettier
+        language: system
+        entry: npm run --prefix assets prettier
+        files: \.(ts|js|tsx|jsx|json|cjs|mjs|yaml)
+        pass_filenames: false
+
+      - id: lint
+        name: Frontent/Lint
+        language: system
+        entry: npm run --prefix assets lint
+        files: \.(ts|js|tsx|jsx|cjs|mjs)
+        pass_filenames: false
+
+      - id: typecheck
+        name: Frontend/Typecheck
+        language: system
+        entry: npm run --prefix assets tsc
+        files: \.(ts|js|tsx|jsx|cjs|mjs)
+        pass_filenames: false
+
+      - id: build
+        name: Frontend/Build
+        language: system
+        entry: npm run --prefix assets build
+        files: \.(ts|js|tsx|jsx|cjs|mjs|ex|exs|heex)
+        pass_filenames: false
+
+      - id: format
+        name: Elixir/Format
+        language: system
+        entry: mix format
+        files: \.(ex|exs|heex)
+        pass_filenames: false
+
+      - id: credo
+        name: Elixir/Credo
+        language: system
+        entry: mix credo --strict
+        files: \.(ex|exs|heex)
+        pass_filenames: false
+
+      - id: sobelow
+        name: Elixir/Sobelow
+        language: system
+        entry: mix sobelow --config --exit
+        files: \.(ex|exs|heex)
+        pass_filenames: false
+
+      - id: test
+        name: Elixir/Test
+        language: system
+        entry: mix test
+        files: \.(ex|exs|heex)
+        pass_filenames: false
+
+      - id: compile
+        name: Elixir/Compile
+        language: system
+        entry: mix compile --force --warnings-as-errors
+        files: \.(ex|exs|heex)
+        pass_filenames: false
