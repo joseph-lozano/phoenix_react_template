@@ -1,6 +1,8 @@
-# Phoenix SolidJS Template
+# Phoenix React Template
 
-This is a template for running a [SolidJS](https://solidjs.com) app with a Phoenix Backend.
+This is a template for running a [React](https://react.dev) app with a Phoenix Backend.
+
+See also: [Phoenix SolidJS Template](https://github.com/joseph-lozano/phoenix_solid_js_template)
 
 
 To start your Phoenix server:
