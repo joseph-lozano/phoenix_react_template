@@ -1,11 +1,11 @@
 import Config
 
 # Configure your database
-config :phoenix_solid_js_template, PhoenixSolidJSTemplate.Repo,
+config :phoenix_react_template, PhoenixReactTemplate.Repo,
   username: "postgres",
   password: "postgres",
   hostname: "localhost",
-  database: "phoenix_solid_js_template_dev",
+  database: "phoenix_react_template_dev",
   stacktrace: true,
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
@@ -16,7 +16,7 @@ config :phoenix_solid_js_template, PhoenixSolidJSTemplate.Repo,
 # The watchers configuration can be used to run external
 # watchers to your application. For example, we can use it
 # to bundle .js and .css sources.
-config :phoenix_solid_js_template, PhoenixSolidJSTemplateWeb.Endpoint,
+config :phoenix_react_template, PhoenixReactTemplateWeb.Endpoint,
   # Binding to loopback ipv4 address prevents access from other machines.
   # Change to `ip: {0, 0, 0, 0}` to allow access from other machines.
   http: [ip: {127, 0, 0, 1}, port: 4000],
@@ -52,7 +52,7 @@ config :phoenix_solid_js_template, PhoenixSolidJSTemplateWeb.Endpoint,
 # different ports.
 
 # Enable dev routes for dashboard and mailbox
-config :phoenix_solid_js_template, dev_routes: true
+config :phoenix_react_template, dev_routes: true
 
 # Do not include metadata nor timestamps in development logs
 config :logger, :console, format: "[$level] $message\n"

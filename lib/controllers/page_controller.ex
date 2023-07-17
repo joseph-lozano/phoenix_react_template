@@ -1,5 +1,5 @@
-defmodule PhoenixSolidJSTemplateWeb.PageController do
-  use PhoenixSolidJSTemplateWeb, :controller
+defmodule PhoenixReactTemplateWeb.PageController do
+  use PhoenixReactTemplateWeb, :controller
 
   # In prod, we can determine the html at compile time
   # Otherwise, we need to read it from the file system
@@ -11,7 +11,7 @@ defmodule PhoenixSolidJSTemplateWeb.PageController do
       """
     end
   else
-    @html :phoenix_solid_js_template
+    @html :phoenix_react_template
           |> :code.priv_dir()
           |> Path.join("static/index.html")
           |> File.read!()

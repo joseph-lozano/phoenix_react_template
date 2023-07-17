@@ -1,6 +1,6 @@
-defmodule PhoenixSolidJSTemplate do
+defmodule PhoenixReactTemplate do
   @moduledoc """
-  PhoenixSolidJSTemplate keeps the contexts that define your domain
+  PhoenixReactTemplate keeps the contexts that define your domain
   and business logic.
 
   Contexts are also responsible for managing your data, regardless

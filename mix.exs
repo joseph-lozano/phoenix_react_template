@@ -1,9 +1,9 @@
-defmodule PhoenixSolidJSTemplate.MixProject do
+defmodule PhoenixReactTemplate.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :phoenix_solid_js_template,
+      app: :phoenix_react_template,
       version: "0.1.0",
       elixir: "~> 1.14",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -25,7 +25,7 @@ defmodule PhoenixSolidJSTemplate.MixProject do
   # Type `mix help compile.app` for more information.
   def application do
     [
-      mod: {PhoenixSolidJSTemplate.Application, []},
+      mod: {PhoenixReactTemplate.Application, []},
       extra_applications: [:logger, :runtime_tools]
     ]
   end

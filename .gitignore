@@ -23,7 +23,7 @@ erl_crash.dump
 /tmp/
 
 # Ignore package tarball (built via "mix hex.build").
-phoenix_solid_js_template-*.tar
+phoenix_react_template-*.tar
 
 .elixir_ls/
 

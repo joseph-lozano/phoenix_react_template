@@ -1,4 +1,4 @@
-defmodule PhoenixSolidJSTemplate.DataCase do
+defmodule PhoenixReactTemplate.DataCase do
   @moduledoc """
   This module defines the setup for tests requiring
   access to the application's data layer.
@@ -10,7 +10,7 @@ defmodule PhoenixSolidJSTemplate.DataCase do
   we enable the SQL sandbox, so changes done to the database
   are reverted at the end of every test. If you are using
   PostgreSQL, you can even run database tests asynchronously
-  by setting `use PhoenixSolidJSTemplate.DataCase, async: true`, although
+  by setting `use PhoenixReactTemplate.DataCase, async: true`, although
   this option is not recommended for other databases.
   """
 
@@ -18,17 +18,17 @@ defmodule PhoenixSolidJSTemplate.DataCase do
 
   using do
     quote do
-      alias PhoenixSolidJSTemplate.Repo
+      alias PhoenixReactTemplate.Repo
 
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
-      import PhoenixSolidJSTemplate.DataCase
+      import PhoenixReactTemplate.DataCase
     end
   end
 
   setup tags do
-    PhoenixSolidJSTemplate.DataCase.setup_sandbox(tags)
+    PhoenixReactTemplate.DataCase.setup_sandbox(tags)
     :ok
   end
 
@@ -37,7 +37,7 @@ defmodule PhoenixSolidJSTemplate.DataCase do
   """
   def setup_sandbox(tags) do
     pid =
-      Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixSolidJSTemplate.Repo,
+      Ecto.Adapters.SQL.Sandbox.start_owner!(PhoenixReactTemplate.Repo,
         shared: not tags[:async]
       )
 

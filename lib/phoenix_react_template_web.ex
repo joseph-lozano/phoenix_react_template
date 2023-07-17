@@ -1,12 +1,12 @@
-defmodule PhoenixSolidJSTemplateWeb do
+defmodule PhoenixReactTemplateWeb do
   @moduledoc """
   The entrypoint for defining your web interface, such
   as controllers, components, channels, and so on.
 
   This can be used in your application as:
 
-      use PhoenixSolidJSTemplateWeb, :controller
-      use PhoenixSolidJSTemplateWeb, :html
+      use PhoenixReactTemplateWeb, :controller
+      use PhoenixReactTemplateWeb, :html
 
   The definitions below will be executed for every controller,
   component, etc, so keep them short and clean, focused
@@ -39,7 +39,7 @@ defmodule PhoenixSolidJSTemplateWeb do
     quote do
       use Phoenix.Controller,
         formats: [:html, :json],
-        layouts: [html: PhoenixSolidJSTemplateWeb.Layouts]
+        layouts: [html: PhoenixReactTemplateWeb.Layouts]
 
       import Plug.Conn
 
@@ -50,9 +50,9 @@ defmodule PhoenixSolidJSTemplateWeb do
   def verified_routes do
     quote do
       use Phoenix.VerifiedRoutes,
-        endpoint: PhoenixSolidJSTemplateWeb.Endpoint,
-        router: PhoenixSolidJSTemplateWeb.Router,
-        statics: PhoenixSolidJSTemplateWeb.static_paths()
+        endpoint: PhoenixReactTemplateWeb.Endpoint,
+        router: PhoenixReactTemplateWeb.Router,
+        statics: PhoenixReactTemplateWeb.static_paths()
     end
   end
 
