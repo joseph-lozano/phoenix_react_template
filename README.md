@@ -24,3 +24,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Run `./rename.sh` to rename your project.
 You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file, and delete the renaming script.
+
+### Credits
+
+A lot of the CI work was taken from Felt's [Ultimate Elixir CI](https://github.com/felt/ultimate-elixir-ci).
