@@ -29,5 +29,5 @@ snake_case_name=$(echo "$app_name" | sed 's/\(.\)\([A-Z]\)/\1_\2/g' | tr '[:uppe
 
 # Step 6: Replace instances of phoenix_solid_js_template in .github folder with snake_case user input
 if [ -d ".github" ]; then
-    find ./.github -type f -exec sed -i '' -e "s/phoenix_solid_js_template/$snake_case_name/g" {} +
+    find ./.github -type f -exec sed -i '' -e "s/phoenix_react_template/$snake_case_name/g" {} +
 fi
