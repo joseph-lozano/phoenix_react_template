@@ -22,7 +22,7 @@ if [[ ! $app_name =~ ^[A-Z][a-zA-Z0-9]*$ ]]; then
 fi
 
 # Step 4: Run `mix rename PhoenixSolidJSTemplate <user_input>`
-mix rename PhoenixSolidJSTemplate "$app_name"
+mix rename PhoenixReactTemplate "$app_name"
 
 # Step 5: Convert PascalCase to snake_case
 snake_case_name=$(echo "$app_name" | sed 's/\(.\)\([A-Z]\)/\1_\2/g' | tr '[:upper:]' '[:lower:]')
