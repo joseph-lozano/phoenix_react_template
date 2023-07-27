@@ -14,11 +14,7 @@ export default defineConfig(({ command }) => {
     process.stdin.resume();
   }
   return {
-    plugins: [
-      react({
-        include: "**/*.tsx",
-      }),
-    ],
+    plugins: [react()],
     resolve: {
       alias: {
         "~": path.resolve(__dirname, "./src"),
