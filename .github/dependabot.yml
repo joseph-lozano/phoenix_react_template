@@ -1,5 +1,11 @@
 version: 2
 updates:
+- package-ecosystem: npm
+  directory: "/assets"
+  schedule:
+    interval: weekly
+    time: "12:00"
+  open-pull-requests-limit: 5
 - package-ecosystem: mix
   directory: "/"
   schedule:
