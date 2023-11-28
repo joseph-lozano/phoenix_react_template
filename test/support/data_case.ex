@@ -18,12 +18,12 @@ defmodule PhoenixReactTemplate.DataCase do
 
   using do
     quote do
-      alias PhoenixReactTemplate.Repo
-
       import Ecto
       import Ecto.Changeset
       import Ecto.Query
       import PhoenixReactTemplate.DataCase
+
+      alias PhoenixReactTemplate.Repo
     end
   end
 
