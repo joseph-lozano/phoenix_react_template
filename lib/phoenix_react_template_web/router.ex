@@ -51,6 +51,7 @@ defmodule PhoenixReactTemplateWeb.Router do
 
       def log_reverse_proxy_error(error) do
         require Logger
+
         Logger.error("ReverseProxyPlug network error: #{inspect(error)}")
       end
     end

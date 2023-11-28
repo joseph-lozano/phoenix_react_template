@@ -20,14 +20,14 @@ defmodule PhoenixReactTemplateWeb.ConnCase do
   using do
     quote do
       # The default endpoint for testing
-      @endpoint PhoenixReactTemplateWeb.Endpoint
-
       use PhoenixReactTemplateWeb, :verified_routes
 
       # Import conveniences for testing with connections
-      import Plug.Conn
       import Phoenix.ConnTest
       import PhoenixReactTemplateWeb.ConnCase
+      import Plug.Conn
+
+      @endpoint PhoenixReactTemplateWeb.Endpoint
     end
   end
 
