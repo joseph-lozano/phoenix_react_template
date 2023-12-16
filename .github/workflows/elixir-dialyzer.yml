@@ -23,7 +23,7 @@ jobs:
         uses: ./.github/actions/elixir-setup
         id: beam
         with:
-          elixir-version: 1.15.2
+          elixir-version: 1.15.7
           otp-version: 26.0.2
           build-app: false
 
