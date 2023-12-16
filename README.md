@@ -4,12 +4,11 @@ This is a template for running a [React](https://react.dev) app with a Phoenix B
 
 See also: [Phoenix SolidJS Template](https://github.com/joseph-lozano/phoenix_solid_js_template)
 
-
 To start your Phoenix server:
 
-  * Run `mix setup` to install and setup NPM and Elixir dependencies
-  * Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
-  * (Optional) Install [pre-commit](https://pre-commit.com/#install) and run `pre-commit install` to setup pre-commit hooks. If installed, the hooks can be bypassed by passing `--no-verify` when running `git commit`.
+- Run `mix setup` to install and setup NPM and Elixir dependencies
+- Start Phoenix endpoint with `mix phx.server` or inside IEx with `iex -S mix phx.server`
+- (Optional) Install [pre-commit](https://pre-commit.com/#install) and run `pre-commit install` to setup pre-commit hooks. If installed, the hooks can be bypassed by passing `--no-verify` when running `git commit`.
 
 ## About
 
