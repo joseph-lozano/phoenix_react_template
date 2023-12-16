@@ -18,7 +18,7 @@ repos:
         pass_filenames: false
 
       - id: lint
-        name: Frontent/Lint
+        name: Frontend/Lint
         language: system
         entry: npm run --prefix assets lint
         files: \.(ts|js|tsx|jsx|cjs|mjs)
