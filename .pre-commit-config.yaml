@@ -48,7 +48,7 @@ repos:
       - id: unused-deps
         name: Elixir/Unused Deps
         language: system
-        entry: mix deps.unlock --check-unused
+        entry: mix deps.unlock --unused
         files: \.(ex|exs|heex)
         pass_filenames: false
 
