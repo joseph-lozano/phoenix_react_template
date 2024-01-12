@@ -45,6 +45,20 @@ repos:
         files: \.(ex|exs|heex)
         pass_filenames: false
 
+      - id: unused-deps
+        name: Elixir/Unused Deps
+        language: system
+        entry: mix deps.unlock --check-unused
+        files: \.(ex|exs|heex)
+        pass_filenames: false
+
+      - id: compile-deps
+        name: Elixir/Compile Deps
+        language: system
+        entry: mix xref graph --label compile-connected --fail-above 0
+        files: \.(ex|exs|heex)
+        pass_filenames: false
+
       - id: credo
         name: Elixir/Credo
         language: system
