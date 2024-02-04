@@ -7,11 +7,10 @@ function App() {
   const [count, setCount] = useState(0);
   const [message, setMessage] = useState<string | null>(null);
   useEffect(() => {
-    async function fetchData() {
-      await fetch("/api/hello").then((res) => res.text().then(setMessage));
-    }
-    fetchData().catch(console.error);
-  });
+    fetch("/api/hello")
+      .then((res) => res.text().then(setMessage))
+      .catch(console.error);
+  }, []);
 
   return (
     <>
