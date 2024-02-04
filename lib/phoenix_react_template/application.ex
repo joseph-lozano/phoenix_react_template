@@ -8,18 +8,16 @@ defmodule PhoenixReactTemplate.Application do
   @impl Application
   def start(_type, _args) do
     children = [
-      # Start the Telemetry supervisor
       PhoenixReactTemplateWeb.Telemetry,
-      # Start the Ecto repository
       PhoenixReactTemplate.Repo,
-      # Start the PubSub system
+      {DNSCluster, query: Application.get_env(:my_app, :dns_cluster_query) || :ignore},
       {Phoenix.PubSub, name: PhoenixReactTemplate.PubSub},
-      # Start Finch
+      # Start the Finch HTTP client for sending emails
       {Finch, name: PhoenixReactTemplate.Finch},
-      # Start the Endpoint (http/https)
-      PhoenixReactTemplateWeb.Endpoint
       # Start a worker by calling: PhoenixReactTemplate.Worker.start_link(arg)
-      # {PhoenixReactTemplate.Worker, arg}
+      # {PhoenixReactTemplate.Worker, arg},
+      # Start to serve requests, typically the last entry
+      PhoenixReactTemplateWeb.Endpoint
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
