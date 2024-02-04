@@ -21,6 +21,7 @@ defmodule PhoenixReactTemplateWeb.PageController do
   end
 
   def hello(conn, _params) do
+    1 |> :timer.seconds() |> Process.sleep()
     text(conn, "Hello from the backend!")
   end
 

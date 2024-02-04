@@ -9,11 +9,12 @@ import Config
 
 config :phoenix_react_template,
   ecto_repos: [PhoenixReactTemplate.Repo],
-  generators: [binary_id: true]
+  generators: [binary_id: true, timestamp_type: :utc_datetime]
 
 # Configures the endpoint
 config :phoenix_react_template, PhoenixReactTemplateWeb.Endpoint,
   url: [host: "localhost"],
+  adapter: Bandit.PhoenixAdapter,
   render_errors: [
     formats: [json: PhoenixReactTemplateWeb.ErrorJSON],
     layout: false
