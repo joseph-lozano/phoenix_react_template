@@ -8,7 +8,6 @@ function App() {
   const [message, setMessage] = useState<string | null>(null);
   useEffect(() => {
     async function fetchData() {
-      await new Promise((resolve) => setTimeout(resolve, 1500));
       await fetch("/api/hello").then((res) => res.text().then(setMessage));
     }
     fetchData().catch(console.error);
