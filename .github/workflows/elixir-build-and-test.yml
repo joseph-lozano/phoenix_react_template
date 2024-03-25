@@ -36,7 +36,7 @@ jobs:
       - name: Setup Elixir Project
         uses: ./.github/actions/elixir-setup
         with:
-          elixir-version: 1.16.0
+          elixir-version: 1.16.2
           otp-version: 26.2.1
           build-flags: --all-warnings --warnings-as-errors
           build-app: true
