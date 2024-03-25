@@ -37,7 +37,7 @@ jobs:
         uses: ./.github/actions/elixir-setup
         with:
           elixir-version: 1.16.2
-          otp-version: 26.2.1
+          otp-version: 26.2.3
           build-flags: --all-warnings --warnings-as-errors
           build-app: true
 
