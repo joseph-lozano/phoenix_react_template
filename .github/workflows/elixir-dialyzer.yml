@@ -23,8 +23,8 @@ jobs:
         uses: ./.github/actions/elixir-setup
         id: beam
         with:
-          elixir-version: 1.16.0
-          otp-version: 26.2.1
+          elixir-version: 1.16.2
+          otp-version: 26.2.3
           build-app: false
 
       # Don't cache PLTs based on mix.lock hash, as Dialyzer can incrementally update even old ones

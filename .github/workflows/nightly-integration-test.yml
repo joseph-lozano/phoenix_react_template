@@ -32,8 +32,8 @@ jobs:
       - name: Setup Elixir Project
         uses: ./.github/actions/elixir-setup
         with:
-          elixir-version: 1.16.0
-          otp-version: 26.2.1
+          elixir-version: 1.16.2
+          otp-version: 26.2.3
 
       - name: Run Migrations
         run: mix ecto.migrate
