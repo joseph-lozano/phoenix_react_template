@@ -24,6 +24,15 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 Run `./rename.sh` to rename your project.
 You can then remove `{:rename_project, "~> 0.1.0", only: :dev}` from your `mix.exs` file, and delete the renaming script.
 
+## Using something other than Vite
+
+- Create a backup of `assets/vite.config.js`
+- `rm -rf assets/`
+- `npm create vite assets/` and select your framework
+- Add back in the vite.config.js, possibly changing the plugin to the apprpriate one
+- The Phoenix watcher assumes the dev server is run with `npm run dev`. Change config/dev.exs if that is not true
+- You may also need to update the Dockerfile
+
 ### Credits
 
 A lot of the CI work was taken from Felt's [Ultimate Elixir CI](https://github.com/felt/ultimate-elixir-ci).
